@@ -1,0 +1,13 @@
+/*!
+ * This is a preserve comment, as marked with the "!" at the beginning of the
+ * comment. It should be present even in the minified file. You can also use a
+ * "license" annotation.
+ */
+
+/**
+ * This is a doc comment. It should be removed
+ */
+
+a {
+    color:red;
+}
