@@ -10,6 +10,9 @@ $config = array(
     // since example-module uses drivers
     'example_module_driver' => 'example-english',
 
+    // configuration for the callmap
+    'callmap_driver'        => 'sqlitecallmap',
+
     // configuration for the key-value store
     'kval_driver' => 'sqlitekv',         // the driver for the store
     'kval_ttl'    => 60 * 60 * 24 * 7,   // store items for a week

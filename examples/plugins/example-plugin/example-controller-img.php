@@ -48,14 +48,15 @@ $jpeg = cal_get_permutation(
     // the callback to create the item if it can't be found
     function ($image) {
         $url = 'https://httpbin.org/image/' . $image;
-        if (!http_get($url, $body)) {
-            // return NULL if there was an error, the cache layer won't store
-            // it and you won't have bad data cached. Also, if there is an
-            // expired item in the cache, returning NULL will "resurrect" it
-            // until the data source is back up.
+        $response = http_get($url);
+        // return NULL if there was an error, the cache layer won't store it and
+        // you won't have bad data cached. Also, if there is an expired item in
+        // the cache, returning NULL will "resurrect" it until the data source
+        // is back up.
+        if (!$response['body'] || $response['error']) {
             return null;
         }
-        return $body;
+        return $response['body'];
     },
     // permutation key, unique to the tranformation, does not have to be unique to the item
     $width,

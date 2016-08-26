@@ -43,11 +43,15 @@ example_plugin_display_file(
     'Creating documentation, access control',
     'plugins/' . plugin() . '/example-controller-documentation.php',
     true
-); 
-
+);
 example_plugin_display_file(
     'Versioning assets',
     'plugins/' . plugin() . '/example-controller-versioning.php',
+    true
+);
+example_plugin_display_file(
+    'Logging calls (call map) and errors',
+    'plugins/' . plugin() . '/example-controller-logging.php',
     true
 );
 example_plugin_link(
