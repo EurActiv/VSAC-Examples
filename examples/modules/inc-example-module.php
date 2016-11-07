@@ -27,16 +27,22 @@
 
 namespace VSAC;
 
-// Import other modules with the use_module function. Use module calls should
-// come right after the namespace, before any function definitions.
-use_module('response');
-
 
 // Framework required functions should be the first function definitions.
 
 //----------------------------------------------------------------------------//
 //-- Framework required functions                                           --//
 //----------------------------------------------------------------------------//
+
+/**
+ * Return an array of modules that this module depends on
+ *
+ * @return array[string]
+ */
+function example_module_depends()
+{
+    return array('response');
+}
 
 /**
  * The {$module_name}_config_items functions is used to tell the application

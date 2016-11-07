@@ -29,15 +29,15 @@ namespace VSAC;
 //----------------------------------------------------------------------------//
 
 /** @see example_module_sysconfig */
-function example_english_sysconfig()
+function example_module_english_sysconfig()
 {
     return true;
 }
 
 /** @see example_module_private_function */
-function example_english_private_function()
+function example_module_english_private_function()
 {
-    return example_english_get_phrase("world.hello");
+    return example_module_english_get_phrase("world.hello");
 }
 
 //----------------------------------------------------------------------------//
@@ -54,7 +54,7 @@ function example_english_private_function()
  *
  * @return string
  */
-function example_english_get_phrase($phrase)
+function example_module_english_get_phrase($phrase)
 {
     switch ($phrase) {
         case 'world.hello':

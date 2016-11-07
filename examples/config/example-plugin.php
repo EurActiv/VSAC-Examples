@@ -11,15 +11,15 @@ $config = array(
     'example_module_driver' => 'example-english',
 
     // configuration for the callmap
-    'callmap_driver'        => 'sqlitecallmap',
+    'callmap_driver'        => 'sqlite',
 
     // configuration for the key-value store
-    'kval_driver' => 'sqlitekv',         // the driver for the store
+    'kval_driver' => 'sqlite',           // the driver for the store
     'kval_ttl'    => 60 * 60 * 24 * 7,   // store items for a week
     'kval_quota'  => 1.0 * 1024 * 1024,  // must be a float!
 
     // configuration for the cache layer
-    'cal_driver' => 'sqlitecache',            // the driver for the store
+    'cal_driver' => 'sqlite',                 // the driver for the store
     'cal_ttl'    => 60 * 60 * 24 * 7,         // store items for a week
     'cal_quota'  => 1.0 * 1024 * 1024 * 128,  // must be a float!
 );
